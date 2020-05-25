@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SimulateUI</string>
+    <string name="activity_name_AL_service_remind">ServiceRemind</string>
+</resources>

@@ -83,3 +83,6 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+ProjectSpace/.idea/
+ProjectSpace/app/src/androidTest/
+ProjectSpace/app/src/test/
