@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">SimulateUI</string>
     <string name="activity_name_AL_service_remind">ServiceRemind</string>
+    <string name="pay_scuccess">Pay Successful</string>
+    <string name="aa_make_money">AA make money</string>
+    <string name="select_more_pay_info">Select more pay info</string>
+    <string name="look_detail">Look detail</string>
 </resources>

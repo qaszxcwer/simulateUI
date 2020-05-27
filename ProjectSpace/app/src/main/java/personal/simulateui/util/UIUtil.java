@@ -9,7 +9,7 @@ import android.view.WindowManager;
  */
 public class UIUtil {
     /**
-     * 设置状态栏透明、填充状态栏原位
+     * 设置状态栏透明、UI全屏显示
      *
      * @param activity 上下文
      */

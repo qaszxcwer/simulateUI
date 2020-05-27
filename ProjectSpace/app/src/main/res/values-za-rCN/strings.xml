@@ -2,4 +2,8 @@
 <resources>
     <string name="app_name">界面模仿</string>
     <string name="activity_name_AL_service_remind">服务提醒</string>
+    <string name="pay_scuccess">付款成功</string>
+    <string name="aa_make_money">AA收款</string>
+    <string name="select_more_pay_info">查看更多支付消息</string>
+    <string name="look_detail">查看详情</string>
 </resources>
