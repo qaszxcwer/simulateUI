@@ -4,7 +4,6 @@ import com.chad.library.adapter.base.BaseMultiItemQuickAdapter;
 import com.chad.library.adapter.base.viewholder.BaseViewHolder;
 
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
@@ -22,7 +21,7 @@ public class ServerRemindAdapter extends BaseMultiItemQuickAdapter<ItemServerRem
     private String getTag() {
         return ServerRemindConstants.tag + "ServerRemindAdapter";
     }
-    public ServerRemindAdapter(@Nullable List<ItemServerRemind> data) {
+    public ServerRemindAdapter(@NotNull List<ItemServerRemind> data) {
         super(data);
         Logger.i(getTag(), "data size = " + data.size());
         addItemType(ServerRemindConstants.SERVER_PAY, R.layout.item_services_remind_pay);

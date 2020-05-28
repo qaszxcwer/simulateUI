@@ -1,6 +1,7 @@
 package personal.simulateui;
 
 import androidx.databinding.DataBindingUtil;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import personal.simulateui.adapter.ServerRemindAdapter;
 import personal.simulateui.api.ServerRemindConstants;
 import personal.simulateui.base.BaseActivity;
@@ -30,6 +31,10 @@ public class ServicesRemindActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         ActivityServicesRemindBinding binding =
                 DataBindingUtil.setContentView(this, R.layout.activity_services_remind);
+        //创建布局管理
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        binding.recServicesRemind.setLayoutManager(layoutManager);
         ServerRemindAdapter adapter = new ServerRemindAdapter(getData());
         binding.recServicesRemind.setAdapter(adapter);
     }
@@ -40,6 +45,8 @@ public class ServicesRemindActivity extends BaseActivity {
         list.add(new ItemServerRemind_Pay(ServerRemindConstants.SERVER_PAY, "支付助手", "19:21", "￥17.00", "XX家常菜-AA路店"));
         list.add(new ItemServerRemind_Express(ServerRemindConstants.SERVER_EXPRESS, "我的快递", "19:15", "已签收", "商品名称YYYY", "YY快递：987654321"));
         list.add(new ItemServerRemind_Pay(ServerRemindConstants.SERVER_PAY, "支付助手", "19:09", "￥3.00", "XX小卖部"));
+        list.add(new ItemServerRemind_Express(ServerRemindConstants.SERVER_EXPRESS, "我的快递", "19:04", "已签收", "商品名称ZZZZ", "YY快递：741852963"));
+        list.add(new ItemServerRemind_Pay(ServerRemindConstants.SERVER_PAY, "支付助手", "19:01", "￥2.00", "XX小卖部"));
 
         return list;
     }
