@@ -4,6 +4,7 @@ import com.chad.library.adapter.base.entity.MultiItemEntity;
 
 /**
  * 作者：qaszxcwer，日期：2020/5/27
+ * 各项服务发出的提醒
  */
 public class ItemServerRemind implements MultiItemEntity {
     @Override

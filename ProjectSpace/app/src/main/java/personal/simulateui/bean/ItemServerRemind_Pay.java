@@ -2,6 +2,7 @@ package personal.simulateui.bean;
 
 /**
  * 作者：qaszxcwer，日期：2020/5/27
+ * 服务：支付助手
  */
 public class ItemServerRemind_Pay extends ItemServerRemind {
     /**
