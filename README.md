@@ -7,6 +7,10 @@ This is my UI simulate project
 
 If you are looking for empolyee in shangHai,leave a message in Issues
 
+一年经验
+
+One year experience
+
 当前状态：在职，寻找机会
 
 Current status: on the job, looking for opportunities
