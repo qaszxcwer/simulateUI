@@ -1,8 +1,9 @@
-package personal.simulateui;
+package personal.simulateui.ui;
 
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import personal.simulateui.R;
 import personal.simulateui.adapter.ServerAdapter;
 import personal.simulateui.adapter.ServerRemindAdapter;
 import personal.simulateui.api.ServerRemindConstants;
