@@ -6,7 +6,24 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingStart="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_10">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="便民生活"
+            android:textColor="@color/black"/>
+
+        <GridView
+            android:id="@+id/gridApps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="15dp"
+            android:verticalSpacing="20dp"
+            android:numColumns="5"
+            android:gravity="center"/>
     </LinearLayout>
 
 </layout>
