@@ -3,11 +3,19 @@ package personal.simulateui.ui;
 import androidx.databinding.DataBindingUtil;
 import personal.simulateui.R;
 import personal.simulateui.adapter.AppAdapter;
+import personal.simulateui.api.AllAppsConstants;
 import personal.simulateui.base.BaseActivity;
 import personal.simulateui.bean.ItemApp;
 import personal.simulateui.databinding.ActivityAllAppBinding;
+import personal.simulateui.defindView.AppsGridView;
 
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,9 +35,31 @@ public class AllAppActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         ActivityAllAppBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_all_app);
         AppAdapter adapter = new AppAdapter();
-        adapter.setList(getData());
+        List<ItemApp> appData = getData();
+        adapter.setList(appData);
 
-        binding.gridApps.setAdapter(adapter);
+        initNewAppsView(binding.linAllAppsRoot, "最近使用", adapter);
+        initNewAppsView(binding.linAllAppsRoot, "便民生活", adapter);
+        initNewAppsView(binding.linAllAppsRoot, "财富管理", adapter);
+        initNewAppsView(binding.linAllAppsRoot, "资金往来", adapter);
+        initNewAppsView(binding.linAllAppsRoot, "教育公益", adapter);
+    }
+
+    private void initNewAppsView(LinearLayout rootView, String name, AppAdapter adapter) {
+        if (rootView == null) {
+            return;
+        }
+        if (TextUtils.isEmpty(name)) {
+            return;
+        }
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        LayoutInflater inflater = getLayoutInflater();
+        View view = inflater.inflate(R.layout.layout_apps, null);
+        TextView textView = view.findViewById(R.id.txtTypeName);
+        textView.setText(name);
+        AppsGridView gridView = view.findViewById(R.id.gridApps);
+        gridView.setAdapter(adapter);
+        rootView.addView(view, layoutParams);
     }
 
     private List<ItemApp> getData() {
