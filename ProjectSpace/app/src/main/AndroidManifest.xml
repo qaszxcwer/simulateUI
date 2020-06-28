@@ -18,6 +18,7 @@
         </activity>
         <activity android:name=".ui.AllAppActivity" />
         <activity android:name=".ui.ServicesRemindActivity"/>
+        <activity android:name=".ui.ChatActivity"/>
     </application>
 
 </manifest>
