@@ -2,6 +2,7 @@ package personal.simulateui.ui;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.view.KeyEvent;
 import android.view.View;
 
 import java.util.ArrayList;
@@ -74,6 +75,21 @@ public class ChatActivity extends BaseActivity {
         binding.recChatContent.setLayoutManager(layoutManager);
         chatAdapter = new ChatAdapter(getData());
         binding.recChatContent.setAdapter(chatAdapter);
+
+        binding.edtChat.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (event.getAction() == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_ENTER) {
+                    // 按下回车键发送消息
+                    itemChatList.add(new ItemChat(binding.edtChat.getText().toString(), ItemChat.TYPE_USER));
+                    binding.recChatContent.scrollToPosition(itemChatList.size() - 1);
+                    binding.edtChat.setText(null);
+                    // 拦截回车键，否则会换行
+                    return true;
+                }
+                return false;
+            }
+        });
     }
 
     /**
