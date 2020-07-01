@@ -1,6 +1,7 @@
 package personal.simulateui.ui;
 
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 
 import java.util.ArrayList;
@@ -39,6 +40,24 @@ public class ChatActivity extends BaseActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_chat);
 
         initView();
+        initOther();
+    }
+
+    private void initOther() {
+        CountDownTimer timer = new CountDownTimer(10 * 1000, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                // 模拟对方发消息过来
+                itemChatList.add(new ItemChat("新消息" + (millisUntilFinished / 1000), ItemChat.TYPE_OTHER));
+                binding.recChatContent.scrollToPosition(itemChatList.size() - 1);
+            }
+
+            @Override
+            public void onFinish() {
+                //
+            }
+        };
+        timer.start();
     }
 
     private void initView() {
@@ -48,7 +67,7 @@ public class ChatActivity extends BaseActivity {
                 onBackPressed();
             }
         });
-        binding.txtChatTitle.setText("聊天名称11111111111111111111111111111111111111111111");
+        binding.txtChatTitle.setText("聊天名称");
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
