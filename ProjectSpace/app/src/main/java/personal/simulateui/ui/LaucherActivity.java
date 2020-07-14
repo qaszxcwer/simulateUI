@@ -37,5 +37,12 @@ public class LaucherActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
+        binding.btnChat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LaucherActivity.this, ChatActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

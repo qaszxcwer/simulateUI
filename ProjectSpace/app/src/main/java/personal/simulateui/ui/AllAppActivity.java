@@ -22,7 +22,7 @@ import java.util.List;
 
 /**
  * 作者：qaszxcwer，日期：2020/6/4
- * 全部应用页面
+ * 仿支付宝全部应用页面
  */
 public class AllAppActivity extends BaseActivity {
     @Override
