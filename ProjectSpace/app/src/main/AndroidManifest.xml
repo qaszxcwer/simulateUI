@@ -19,6 +19,7 @@
         <activity android:name=".ui.AllAppActivity" />
         <activity android:name=".ui.ServicesRemindActivity"/>
         <activity android:name=".ui.ChatActivity"/>
+        <activity android:name=".ui.RegionsActivity"/>
     </application>
 
 </manifest>

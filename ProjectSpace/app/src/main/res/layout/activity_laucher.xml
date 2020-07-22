@@ -25,6 +25,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="聊天"/>
+
+        <Button
+            android:id="@+id/btnRegions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="省份选择"/>
     </LinearLayout>
 
 </layout>

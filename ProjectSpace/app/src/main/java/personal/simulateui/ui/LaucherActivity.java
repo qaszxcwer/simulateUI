@@ -44,5 +44,12 @@ public class LaucherActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
+        binding.btnRegions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LaucherActivity.this, RegionsActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
