@@ -13,7 +13,7 @@ import androidx.leanback.widget.VerticalGridView;
 import personal.simulateui.R;
 import personal.simulateui.bean.RegionBean;
 import personal.simulateui.bean.RegionListBean;
-import personal.simulateui.leanback.RegionsPresenter;
+import personal.simulateui.leanbackPresenter.RegionsPresenter;
 
 /**
  * 作者：qaszxcwer
