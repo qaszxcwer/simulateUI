@@ -1,5 +1,6 @@
 package personal.simulateui.leanbackPresenter;
 
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,6 +59,8 @@ public class RegionsPresenter extends Presenter {
             // 3个一行
             int lines = list.size()/itemNumPreLine + (list.size() % itemNumPreLine == 0 ? 0 : 1);
             hgRegions.setNumRows(lines);
+            hgRegions.setHorizontalSpacing(100);
+            hgRegions.setGravity(Gravity.LEFT);
             ViewGroup.LayoutParams layoutParams = hgRegions.getLayoutParams();
             // 每行50像素高
             layoutParams.height = lines * 50;
