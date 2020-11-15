@@ -51,5 +51,12 @@ public class LaucherActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
+        binding.btnAIDL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LaucherActivity.this, AidlActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
