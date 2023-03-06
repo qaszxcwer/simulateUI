@@ -58,5 +58,12 @@ public class LaucherActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
+        binding.btnListKotlin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LaucherActivity.this, ListKotlinActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
